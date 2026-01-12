@@ -85,3 +85,119 @@ Un dépôt GitHub fonctionnel prêt à recevoir le code.
 
 
 
+🔹 Étape 2 – Création de la mini API
+
+1\. Objectif de l’étape
+
+
+
+Cette étape avait pour objectif de créer une mini application web qui servira de support au pipeline CI/CD.
+
+L’API permet de disposer d’un code réel sur lequel automatiser les tests, le build et la livraison.
+
+
+
+2\. Création de l’environnement virtuel
+
+python -m venv venv
+
+venv\\Scripts\\activate
+
+
+
+
+
+Ces commandes permettent de créer et d’activer un environnement virtuel Python.
+
+Cela isole les bibliothèques du projet et évite les conflits avec d’autres projets.
+
+
+
+3\. Installation des dépendances
+
+pip install flask pytest
+
+
+
+
+
+Flask est utilisé pour développer l’API.
+
+
+
+Pytest est utilisé pour les tests automatiques dans la partie CI.
+
+
+
+4\. Développement de l’API
+
+
+
+Un fichier app.py a été créé.
+
+Il contient deux routes principales :
+
+
+
+/ : retourne un message de test
+
+
+
+/status : retourne l’état de l’application
+
+
+
+Le serveur est lancé avec :
+
+
+
+python app.py
+
+
+
+
+
+L’API est accessible sur http://localhost:5000.
+
+
+
+5\. Sauvegarde des dépendances
+
+pip freeze > requirements.txt
+
+
+
+
+
+Cette commande génère un fichier listant toutes les bibliothèques nécessaires au projet.
+
+Il est indispensable pour l’automatisation (Docker et CI/CD).
+
+
+
+6\. Résultat de l’étape
+
+
+
+À la fin de cette étape, le projet dispose :
+
+
+
+d’une mini API fonctionnelle,
+
+
+
+d’une base de code exploitable,
+
+
+
+d’un fichier de dépendances,
+
+
+
+d’un socle prêt pour l’intégration continue.
+
+
+
+Cette API constitue le cœur applicatif du projet CI/CD.
+

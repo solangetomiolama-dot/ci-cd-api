@@ -1,0 +1,25 @@
+# Cache Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environnement virtuel
+venv/
+
+# Captures d'écran
+captures/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Système
+.DS_Store
+Thumbs.db
+
+# Fichiers temporaires
+*.log
+*.tmp
