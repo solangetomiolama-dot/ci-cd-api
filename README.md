@@ -201,3 +201,119 @@ d’un socle prêt pour l’intégration continue.
 
 Cette API constitue le cœur applicatif du projet CI/CD.
 
+
+
+
+
+Étape 3 – Mise en place des tests automatiques (CI)
+
+1\. Objectif de l'étape
+
+Cette étape vise à automatiser la vérification du code grâce à des tests unitaires et à configurer l'intégration continue avec GitHub Actions. L'objectif est de détecter rapidement les régressions.
+
+
+
+2\. Création des tests unitaires
+
+Un fichier test\_app.py a été créé avec trois tests :
+
+
+
+Test de la route principale (/) : vérifie que l'API retourne le bon message
+
+
+
+Test de la route status (/status) : vérifie que le statut est "OK"
+
+
+
+Test d'une route inexistante : vérifie qu'une erreur 404 est retournée
+
+
+
+3\. Exécution locale des tests
+
+Les tests ont été exécutés localement avec pytest :
+
+
+
+bash
+
+pytest test\_app.py -v
+
+Résultat : ✅ 3 tests passés avec succès.
+
+
+
+4\. Configuration de GitHub Actions
+
+Un pipeline CI a été configuré dans .github/workflows/ci.yml :
+
+
+
+Déclenchement : à chaque push ou pull request sur la branche main
+
+
+
+Environnement : Ubuntu avec Python 3.9
+
+
+
+Étapes :
+
+
+
+Récupération du code
+
+
+
+Installation de Python
+
+
+
+Installation des dépendances
+
+
+
+Exécution des tests avec pytest
+
+
+
+5\. Gestion des fichiers à ignorer
+
+Un fichier .gitignore a été créé pour exclure :
+
+
+
+L'environnement virtuel (venv/)
+
+
+
+Les fichiers cache Python (\_\_pycache\_\_/)
+
+
+
+Les fichiers de configuration d'IDE
+
+
+
+6\. Résultat de l'étape
+
+À la fin de cette étape, le projet dispose :
+
+
+
+✅ De tests unitaires automatisés
+
+
+
+✅ D'un pipeline CI configuré sur GitHub
+
+
+
+✅ D'une structure propre avec .gitignore
+
+
+
+✅ D'une base solide pour l'intégration continue
+

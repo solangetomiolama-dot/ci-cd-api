@@ -1,0 +1,22 @@
+# Ignorer les mêmes fichiers que .gitignore
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environnement virtuel
+venv/
+
+# IDE
+.vscode/
+.idea/
+
+# Système
+.DS_Store
+Thumbs.db
+
+# Captures d'écran
+captures/
+
+# Fichiers de log
+*.log
