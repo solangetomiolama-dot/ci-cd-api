@@ -37,6 +37,7 @@ Docker
 Railway
 
 ⚙️ Étapes de réalisation
+
 🔹 1. Mise en place de l’environnement
 
 Installation de Python, Git, création du dépôt GitHub, environnement virtuel, installation des dépendances et configuration du versionnement.
