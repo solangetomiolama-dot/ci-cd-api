@@ -1,319 +1,98 @@
-\# Projet CI/CD – Mini API
+PROJET CI/CD PIPELINE AVEC API FLASK
 
+Réalisé par :
+- TOMI OLAMMA GABRIELLE SOLANGE HN5-CIN 21P643
+- ZOO ZAME JESSICA 
+- MINKOULOU ABE ALEXANDRE PATRICK
+- DJEUMI NOUBET STEVE THIERRY
 
+📌 Description du projet
 
-\## 📌 Présentation
+Ce projet consiste à mettre en place un pipeline CI/CD complet pour une API Flask. Il couvre tout le cycle : développement, tests automatisés, containerisation avec Docker et déploiement continu sur Railway via GitHub Actions.
 
-Ce projet a pour objectif de mettre en place un pipeline CI/CD pour une mini application web (API).
+🎯 Objectifs du projet
 
+Comprendre les principes du CI/CD
 
+Automatiser les tests et le déploiement
 
-Il montre comment automatiser les tests, le build et la préparation au déploiement à l’aide de GitHub Actions.
+Mettre en œuvre Docker pour la reproductibilité
 
+Utiliser GitHub Actions pour l’intégration continue
 
+Déployer une application en production (Railway)
 
+🧰 Technologies utilisées
 
+Python / Flask
 
-\## 🎯 Objectifs
+Pytest
 
-\- Comprendre le fonctionnement du CI/CD  
+Git & GitHub
 
-\- Mettre en place un pipeline automatisé  
+GitHub Actions
 
-\- Créer une mini API pour support de tests  
+Docker
 
-\- Utiliser GitHub comme plateforme d’intégration
+Railway
 
+⚙️ Étapes de réalisation
+🔹 1. Mise en place de l’environnement
 
+Installation de Python, Git, création du dépôt GitHub, environnement virtuel, installation des dépendances et configuration du versionnement.
 
-\# 🧰 Outils utilisés
+🔹 2. Développement de l’API Flask
 
-\- Git \& GitHub  
+Création d’une API simple avec deux routes principales :
 
-\- Python (Flask)  
+/ → message de bienvenue
 
-\- Pytest  
+/status → vérification de l’état de l’API
 
-\- Docker  
+Tests locaux pour valider le bon fonctionnement.
 
-\- GitHub Actions  
+🔹 3. Tests automatisés & Intégration Continue
 
+Implémentation de tests unitaires avec Pytest et configuration d’un pipeline GitHub Actions pour exécuter automatiquement les tests à chaque push.
 
+🔹 4. Containerisation avec Docker
 
+Création d’un Dockerfile pour empaqueter l’application, assurer sa portabilité et permettre le build automatique via le pipeline CI.
 
+🔹 5. Déploiement continu avec Railway
 
-\## 🔹 Étape 1 – Mise en place de l’environnement
+Connexion du dépôt GitHub à Railway pour déclencher automatiquement le déploiement après chaque mise à jour validée.
 
+📊 Résultats obtenus
 
+API fonctionnelle et accessible en ligne
 
-Dans cette étape, nous avons préparé l’environnement de travail et créé le dépôt du projet.
+Pipeline CI/CD automatisé
 
+Tests exécutés automatiquement
 
+Image Docker générée avec succès
 
-Actions réalisées :
+Déploiement continu opérationnel
 
-\- installation de Python, Git, Docker et VS Code  
+⚠️ Difficultés rencontrées
 
-\- création du dépôt GitHub  
+Problèmes de versions Python
 
-\- initialisation du dépôt local (`git init`)  
+Erreurs de configuration YAML
 
-\- liaison avec GitHub (`git remote add origin ...`)  
+Problèmes de Dockerfile
 
-\- vérification avec `git status`
+Configuration du déploiement Railway
 
+👉 Tous ces problèmes ont été résolus grâce à l’analyse des logs, aux tests et aux corrections progressives.
 
+🏁 Conclusion
 
-Objectif :
+Ce projet a permis de comprendre concrètement le fonctionnement d’un pipeline CI/CD moderne et l’importance de l’automatisation dans le développement et le déploiement des applications.
 
-Mettre en place le versionnement du code et préparer l’automatisation CI/CD.
+🔗 Liens utiles
 
+Dépôt GitHub : https://github.com/solangetomiolama-dot/ci-cd-api
 
-
-Résultat :
-
-Un dépôt GitHub fonctionnel prêt à recevoir le code.
-
-
-
-\## 👥 Membres du groupe
-
-* TOMI OLAMA GABRIELLE SOLANGE
-* ZOO ZAME JESSICA
-* MINKOULOU ABE ALEXANDRE PATRICK
-* DJEUMI NOUBET STEVE THIERRY 
-
-
-
-🔹 Étape 2 – Création de la mini API
-
-1\. Objectif de l’étape
-
-
-
-Cette étape avait pour objectif de créer une mini application web qui servira de support au pipeline CI/CD.
-
-L’API permet de disposer d’un code réel sur lequel automatiser les tests, le build et la livraison.
-
-
-
-2\. Création de l’environnement virtuel
-
-python -m venv venv
-
-venv\\Scripts\\activate
-
-
-
-
-
-Ces commandes permettent de créer et d’activer un environnement virtuel Python.
-
-Cela isole les bibliothèques du projet et évite les conflits avec d’autres projets.
-
-
-
-3\. Installation des dépendances
-
-pip install flask pytest
-
-
-
-
-
-Flask est utilisé pour développer l’API.
-
-
-
-Pytest est utilisé pour les tests automatiques dans la partie CI.
-
-
-
-4\. Développement de l’API
-
-
-
-Un fichier app.py a été créé.
-
-Il contient deux routes principales :
-
-
-
-/ : retourne un message de test
-
-
-
-/status : retourne l’état de l’application
-
-
-
-Le serveur est lancé avec :
-
-
-
-python app.py
-
-
-
-
-
-L’API est accessible sur http://localhost:5000.
-
-
-
-5\. Sauvegarde des dépendances
-
-pip freeze > requirements.txt
-
-
-
-
-
-Cette commande génère un fichier listant toutes les bibliothèques nécessaires au projet.
-
-Il est indispensable pour l’automatisation (Docker et CI/CD).
-
-
-
-6\. Résultat de l’étape
-
-
-
-À la fin de cette étape, le projet dispose :
-
-
-
-d’une mini API fonctionnelle,
-
-
-
-d’une base de code exploitable,
-
-
-
-d’un fichier de dépendances,
-
-
-
-d’un socle prêt pour l’intégration continue.
-
-
-
-Cette API constitue le cœur applicatif du projet CI/CD.
-
-
-
-
-
-Étape 3 – Mise en place des tests automatiques (CI)
-
-1\. Objectif de l'étape
-
-Cette étape vise à automatiser la vérification du code grâce à des tests unitaires et à configurer l'intégration continue avec GitHub Actions. L'objectif est de détecter rapidement les régressions.
-
-
-
-2\. Création des tests unitaires
-
-Un fichier test\_app.py a été créé avec trois tests :
-
-
-
-Test de la route principale (/) : vérifie que l'API retourne le bon message
-
-
-
-Test de la route status (/status) : vérifie que le statut est "OK"
-
-
-
-Test d'une route inexistante : vérifie qu'une erreur 404 est retournée
-
-
-
-3\. Exécution locale des tests
-
-Les tests ont été exécutés localement avec pytest :
-
-
-
-bash
-
-pytest test\_app.py -v
-
-Résultat : ✅ 3 tests passés avec succès.
-
-
-
-4\. Configuration de GitHub Actions
-
-Un pipeline CI a été configuré dans .github/workflows/ci.yml :
-
-
-
-Déclenchement : à chaque push ou pull request sur la branche main
-
-
-
-Environnement : Ubuntu avec Python 3.9
-
-
-
-Étapes :
-
-
-
-Récupération du code
-
-
-
-Installation de Python
-
-
-
-Installation des dépendances
-
-
-
-Exécution des tests avec pytest
-
-
-
-5\. Gestion des fichiers à ignorer
-
-Un fichier .gitignore a été créé pour exclure :
-
-
-
-L'environnement virtuel (venv/)
-
-
-
-Les fichiers cache Python (\_\_pycache\_\_/)
-
-
-
-Les fichiers de configuration d'IDE
-
-
-
-6\. Résultat de l'étape
-
-À la fin de cette étape, le projet dispose :
-
-
-
-✅ De tests unitaires automatisés
-
-
-
-✅ D'un pipeline CI configuré sur GitHub
-
-
-
-✅ D'une structure propre avec .gitignore
-
-
-
-✅ D'une base solide pour l'intégration continue
-
+URL de production : https://ci-cd-api-production.up.railway.app/
